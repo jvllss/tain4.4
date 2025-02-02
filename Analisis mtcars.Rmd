@@ -5,6 +5,16 @@ date: "2025-02-02"
 output: html_document
 ---
 
+# Índice
+
+- [Introducción](#introducción)
+- [Carga de datos](#carga-de-datos)
+- [Análisis de Datos](#análisis-de-datos)
+  - [Tabla estática](#tabla-estática)
+  - [Tabla interactiva](#tabla-interactiva)
+  - [Visualización de Datos](#visualización-de-datos)
+- [Conclusiones](#conclusiones)
+
 # Introducción
 
 Este documento realiza un análisis exploratorio del conjunto de datos `mtcars` en R. Se presentarán tablas y gráficos para visualizar relaciones entre las variables y extraer información clave.
