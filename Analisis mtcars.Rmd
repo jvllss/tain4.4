@@ -1,0 +1,54 @@
+---
+title: "Analisis mtcars"
+author: "Javier"
+date: "2025-02-02"
+output: html_document
+---
+
+# Introducción
+
+Este documento realiza un análisis exploratorio del conjunto de datos `mtcars` en R. Se presentarán tablas y gráficos para visualizar relaciones entre las variables y extraer información clave.
+
+```{r setup, include=FALSE}
+library(knitr)
+library(DT)
+library(ggplot2)
+
+# Cargar datos
+data(mtcars)
+```
+
+# Análisis de Datos
+
+## Tabla estática
+
+```{r}
+kable(head(mtcars), caption = "Primeras filas del dataset mtcars")
+```
+
+## Tabla interactiva
+
+```{r}
+datatable(mtcars, options = list(pageLength = 5), caption = "Dataset completo de mtcars")
+```
+
+## Visualización de Datos
+
+El siguiente gráfico muestra la relación entre la potencia del motor (*hp*) y el consumo de combustible (*mpg*).
+
+```{r}
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point(color = "blue") +
+  labs(title = "Relación entre Potencia y Consumo",
+       x = "Caballos de fuerza (hp)",
+       y = "Millas por galón (mpg)") +
+  theme_minimal()
+```
+
+# Conclusiones
+
+- Se observa una relación **inversa** entre la potencia del motor (*hp*) y el consumo de combustible (*mpg*).
+- La tabla interactiva facilita la exploración de los datos.
+- La visualización gráfica ayuda a identificar patrones y tendencias.
+
+Este análisis proporciona una visión general del dataset `mtcars` y muestra la utilidad de las herramientas de R para la exploración de datos.
